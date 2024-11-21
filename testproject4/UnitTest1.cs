@@ -200,9 +200,9 @@ namespace testproject4
 
     // Assert
             Assert.IsTrue(MainCode.books.Count == initialBookCount + 1);
-            Assert.AreEqual("Python Programming", MainCode.books[0].Title);
-            Assert.AreEqual("Sam Johnson", MainCode.books[0].Author);
-            Assert.AreEqual("1111111111", MainCode.books[0].ISBN);
+            Assert.AreEqual("test one", MainCode.books[0].Title);
+            Assert.AreEqual("name one", MainCode.books[0].Author);
+            Assert.AreEqual("54564566454", MainCode.books[0].ISBN);
 
 
         }        
