@@ -206,7 +206,25 @@ namespace testproject4
 
 
         }        
-      
+        [TestMethod]
+        public void failuretest()
+        {
+        // Arrange
+            int initialBookCount = MainCode.books.Count;
+            var programmingBook = new Book
+            {
+                Id = 110,
+                Title = "test one",
+                Author = "name one",
+                ISBN = "54564566454"
+            };
+
+            // Act
+            MainCode.books.Add(programmingBook);
+
+             // Assert
+            Assert.IsTrue(MainCode.books.Count == initialBookCount + 2); // This will fail because we expect +1, but we assert +2
+        }  
 
         
     }
