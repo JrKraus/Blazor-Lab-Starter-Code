@@ -182,7 +182,30 @@ namespace testproject4
             // Assert
             Assert.AreEqual(0, MainCode.users.Count);
         }
-            
+        [TestMethod]
+        public void TestBookInitialization()
+        {
+            // Arrange
+            int initialBookCount = MainCode.books.Count;
+            var programmingBook = new Book
+            {
+                Id = 110,
+                Title = "test one",
+                Author = "name one",
+                ISBN = "54564566454"
+            };
+
+    // Act
+            MainCode.books.Add(programmingBook);
+
+    // Assert
+            Assert.IsTrue(MainCode.books.Count == initialBookCount + 1);
+            Assert.AreEqual("Python Programming", MainCode.books[0].Title);
+            Assert.AreEqual("Sam Johnson", MainCode.books[0].Author);
+            Assert.AreEqual("1111111111", MainCode.books[0].ISBN);
+
+
+        }        
       
 
         
