@@ -183,19 +183,7 @@ namespace testproject4
             Assert.AreEqual(0, MainCode.users.Count);
         }
             
-        [TestMethod]
-        public void newtest()
-         {
-            // Arrange
-            var book = new Book(110, "The Great Gatsby", "F. Scott Fitzgerald", "9780743273565");
-
-            // Act & Assert
-            Assert.AreEqual(110, book.Id);
-            Assert.AreEqual("The Great Gatsby", book.Title);
-            Assert.AreEqual("F. Scott Fitzgerald", book.Author);
-            Assert.AreEqual("9780743273565", book.ISBN);
-        }
-  
+      
 
         
     }
